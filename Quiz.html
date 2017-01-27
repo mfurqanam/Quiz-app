@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+      <script src="javaScript.js"></script>
+      <style>
+        
+         .header{
+            
+             width: 98%;          
+             padding-top: 1%;
+             padding-left: 1%;
+             padding-bottom: 1%;
+             border-radius: 5px; 
+             margin-right: 99px;
+             margin-bottom: 2%;
+             border: 1px solid dodgerblue;
+             background: white;
+         }
+      
+         #appName{
+             position: absolute;           
+             left: 45%;
+         }
+         #name{
+             position: absolute;        
+             left: 80%; 
+         }
+         .btn{
+             position: relative;
+             float: right;
+             color: white;
+              border: 1px solid dodgerblue;
+             border-bottom-right-radius: 5px;
+             border-bottom-left-radius: 5px;
+             border-top-right-radius: 5px;
+              font-size: 120%;
+              background: dodgerblue;        
+         }
+        .d{
+            display: none;
+        }
+        .c{
+            display: block ;
+        }
+        #result{
+            padding-left: 40%;
+        }
+         </style>
+</head>
+<body  onload="username();" bgcolor="#f2f2f2">
+    <div class="header">
+        <span id="timeout">Time Out</span>
+        <span id="appName"><b>Q</b>uizApp</span>
+        <span id="name">User Name <script>username(); </script></span>
+    </div>
+    
+    
+    <div class="header">
+     <div id="q1">   
+    <p> Q  What is the value of 6 × 52 − (23 + 12 ÷ 4)?</p>
+     <input type="radio" name="r1"> 286<br>
+     <input type="radio" name="r1" > 289<br>
+     <input type="radio" name="r1"> 186 <br>
+      </div>
+       <div id="q2" class="d">   
+    <p> Q  What is the value of 6 × 52 − 15 / 3</p>
+     <input type="radio" name="r1"> 99<br>
+     <input type="radio" name="r1" > 307 <br>
+     <input type="radio" name="r1"> 74 <br>
+      </div>
+        <div id="q3" class="d">   
+      <p> Q  PI value is?</p>
+     <input type="radio" name="r1"> 2.14<br>
+     <input type="radio" name="r1" > 3.14 <br>
+     <input type="radio" name="r1"> 3.9 <br>
+      </div>
+     <input onclick="return validateRadios();" type="submit" name="r1" value="Next" id="b" class="btn">  
+     <div id="result" class ="d">Result.... </div> 
+    </div>
+    
+</body>
+</html>

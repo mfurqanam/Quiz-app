@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #Header{
+                                
+            background: dodgerblue;
+            text-align: center;
+            font-size: 16px;
+            padding: 1em;
+            border-bottom: 2px solid black;
+         }
+         #appName{
+              color: white;
+             
+              font-family: Georgia, 'Times New Roman', Times, serif;
+             
+         }
+         #container{
+             top: 0;
+              width: 100%;
+             
+}
+fieldset{
+  background: white;
+  position:absolute;
+  color:black;
+  width: 30%;
+  height: 50%;
+  top:25%;
+  left:35%;
+  border: 1px solid dodgerblue;
+ 
+  color: #5a5854;
+}
+
+form{
+ margin-top: 10%;
+}
+
+input {
+
+color: #5a5854;
+
+border: 1px solid #bdbdbd;
+border-radius: 5px;
+padding: 5px 5px 5px 30px;
+}
+legend {
+font-size: 18px;
+text-align: right;
+}
+
+    </style>
+     <script src="javaScript.js"></script>
+</head>
+<body  bgcolor="#f2f2f2">
+ 
+    <div id="Header">
+       <h3 id ="appName">Quiz App</h1> 
+    </div>
+   
+       <fieldset>
+           <legend><b>Registration Form</b></legend>
+       <form action="Quiz.html" onSubmit="return signUp('name','email','pass');">
+           <table>
+               <tr>
+          <tr>
+              <td><b> Enter Name</b> :</td> <td><input id="name" type="text" placeholder="Please enter your name" required="required"></td></tr>
+           <tr>
+               <td><b> Password</b> :</td><td> <input id="pass" type="text" placeholder="Password" required="required" maxlength="8"></td> </tr>
+           <tr>
+                <td><b> email address</b> :</td><td><input id="email" type="text" placeholder="Enter your email address" required="required"></td></tr>
+           </table>
+             <button >Sign up</button>
+       </form>
+       </fieldset>
+       </div>
+    
+</body>
+</html>
