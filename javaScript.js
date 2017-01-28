@@ -73,18 +73,18 @@ function myTimer() {
     {
         
         timer = "Time Out  " + min + " : 0" + sec--;
-        localStorage.setItem("sec",sec);
+       // localStorage.setItem("sec",sec);
     }
     else
     {
         timer = "Time Out  " + min + " : " + sec--;
-        localStorage.setItem("sec",sec);
+       // localStorage.setItem("sec",sec);
     }
     document.getElementById("timeout").innerHTML = timer;
     if(sec == -1){
         min--;
         sec=59;
-         localStorage.setItem("min",min);
+        // localStorage.setItem("min",min);
         if(min==-1){
             clearInterval(myVar);
             document.getElementById('q1').className+= " d";
@@ -142,14 +142,19 @@ function validateRadios() {
           Result = ++Result;
       }
       Result = Result/3 *100;
-    }
-    if(Result >= 40){
+	   if(Result >= 40){
          document.getElementById("result").innerHTML = "Congratulations you have passed with score " + Result;
+		  clearInterval(myVar);
+		  document.getElementById("timeout").innerHTML = "timeout 0 : 00";
     }
     else
     {
          document.getElementById("result").innerHTML = "Sorry you have faild with score " + Result;
+		  clearInterval(myVar);
+		  document.getElementById("timeout").innerHTML = "timeout 0 : 00";
     }
+    }
+   
  return true;
  }
  }
