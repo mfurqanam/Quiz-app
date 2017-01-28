@@ -71,7 +71,53 @@ function signUp(name,email,pass) {
     // window.location.pathname = "D:/HTML&CSS/qiuzApp/Quiz.html";
      
 }
- 
+ function login(pass,email){
+        
+     var password = document.getElementById(pass).value;
+    
+     var numberSomewhere = false;
+      for (var i = 0; i < password.length; i++) {
+           if (isNaN(password[i]) === false || password[i] ===' ') {
+                numberSomewhere = true;
+                break;
+             }
+        }
+        
+        if(numberSomewhere===false){
+             alert("Wrong password atleast one character must be a numeric");
+             return false;
+        }
+     var em = document.getElementById(email).value;
+    
+    // checking @ in email
+     var temp = em.indexOf("@");
+     if(temp==-1 || temp==0){
+         alert("Wrong email address please enter correct email adress");
+         return false;
+     }
+     // checking . in email
+    var temp1 = em.lastIndexOf(".");  
+    if(temp==temp1-1 || temp1==-1){
+         alert("Wrong email address enter correct email adress");
+         return false;
+     }
+   
+     var users = [];
+     users[0]=password;
+     users[1]=em;
+    
+     if(localStorage.getItem(em)===null){
+      
+         alert("Wrong email address enter correct email adress");
+         return false;
+     }
+   
+    else if(password==saveUserData[1] && em==saveUserData[2] )
+    {  var saveUserData = localStorage.getItem(em).split(',');
+        alert("Succesfully login");
+       return true;
+    }
+ }
  var myVar = setInterval(myTimer ,1000);
   var min = 0 ,sec=29;
   
@@ -170,4 +216,19 @@ function validateRadios() {
  }
  alert("Please check one.");
  return false;
+ }
+ function LoginOrRegister(id){
+     
+     if(id==='log'){
+          document.getElementById("login").classList.remove("hid");
+          document.getElementById('wel').className+= " hid";
+          document.getElementById('signup').className = " hid";
+     }
+     else
+     {
+          document.getElementById("signup").classList.remove("hid");
+          document.getElementById('wel').className+= " hid";
+           document.getElementById('login').className = " hid";
+     }
+    
  }

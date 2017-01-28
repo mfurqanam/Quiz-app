@@ -14,7 +14,7 @@
          }
          #appName{
               color: white;
-             
+              display: inline;
               font-family: Georgia, 'Times New Roman', Times, serif;
              
          }
@@ -28,7 +28,7 @@ fieldset{
   position:absolute;
   color:black;
   width: 30%;
-  height: 50%;
+  
   top:25%;
   left:35%;
   border: 1px solid dodgerblue;
@@ -49,20 +49,38 @@ border-radius: 5px;
 padding: 5px 5px 5px 30px;
 }
 legend {
-font-size: 18px;
+font-size: 1em;
 text-align: right;
 }
-
+.hid{
+    display: none;
+}
+#wel{
+    text-align: center;
+}
+#navlog{
+    color: white;
+    float: right;
+}
+.btn{
+    color: white;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+#msg{
+    font-family: 'sans-serif';
+}
     </style>
      <script src="javaScript.js"></script>
 </head>
 <body  bgcolor="#f2f2f2">
  
     <div id="Header">
-       <h3 id ="appName">Quiz App</h1> 
+       <h3 id ="appName">Quiz App</h3><span id="navlog" ><button onclick="LoginOrRegister('log');" class="btn">Login</button> | <button onclick="LoginOrRegister('reg');"  class="btn" > Register</button></span>
     </div>
    
-       <fieldset>
+       <fieldset id="signup"  class="hid">
            <legend><b>Registration Form</b></legend>
        <form action="Quiz.html" onSubmit="return signUp('name','email','pass');">
            <table>
@@ -78,6 +96,24 @@ text-align: right;
        </form>
        </fieldset>
        </div>
-    
+     <fieldset id="login" class="hid" >
+         <legend>Log in</legend>
+         <form action="Quiz.html" onSubmit="return login('Lpass','Lemail');">
+           <table>
+               <tr>
+               <td><b> Password</b> :</td><td> <input id="Lpass" type="text" placeholder="Password" required="required" maxlength="8"></td> </tr>
+           <tr>
+                <td><b> email address</b> :</td><td><input id="Lemail" type="text" placeholder="Enter your email address" required="required"></td></tr>
+           </table>
+             <button >Sign up</button>
+       </form>
+     </fieldset>
+    <fieldset id="wel" >
+         <h1> Welcome to Quiz app</h1>
+         <p id="msg">"<i>Lets Check Your Sense..."<br><br>Ii is not just a quiz app for this app you can gain your knowledgde
+                            as well as enhance your brain skills to solve problems quickly and it is very help full for those students who wants to
+                            prcatice before their oraginal test which are based on Multiple choise questions <br></br>
+                            Please registered first yourself  if you are already register please log in<br>"Enjoy this Quiz app and lets rock your mind" </p>
+    </fieldset>
 </body>
 </html>
