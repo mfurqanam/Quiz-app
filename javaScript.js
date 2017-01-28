@@ -8,9 +8,19 @@ function signUp(name,email,pass) {
     
      for (var i = 0; i < val.length; i++) {
            if (isNaN(val[i]) === false) {
+			   if(val[i]==' ')
+			   {
+				   count++;
+				   if(count == val.length){
+					   alert("Name must be alphabetically");
+                       return false;
+				   }
+				   continue;
+			   }
                 alert("Name must be alphabetically");
                 return false;
              }
+			 
         }
         
      var password = document.getElementById(pass).value;
