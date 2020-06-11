@@ -119,7 +119,7 @@ function signUp(name,email,pass) {
     }
  }
  var myVar = setInterval(myTimer ,1000);
-  var min = 0 ,sec=29;
+  var min = 1 ,sec=29;
   
  
   var timer;
